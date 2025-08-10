@@ -1,0 +1,1035 @@
+/* 1. Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  font-family: sans-serif;
+}
+
+/* 2. Background & Layout */
+body {
+  background: url("../assets/images/bgwebbb.jpg") no-repeat center center fixed;
+  background-size: cover;
+  background-color: #a0e7ff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 3. Navigation Bar */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: color 0.3s;
+}
+.nav-links a:hover,
+.nav-links a.active {
+  color: #0077cc;
+  font-weight: bold;
+}
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #333;
+  position: relative;
+  transition: 0.3s;
+}
+.hamburger::before { top: -8px; }
+.hamburger::after { top: 8px; }
+@media (max-width: 768px) {
+  .nav-toggle { display: block; }
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(255,255,255,0.95);
+    flex-direction: column;
+    width: 200px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  .nav-links.nav-open { transform: translateX(0); }
+}
+
+/* 4. Headers & Footers */
+.page-header,
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(255,255,255,0.8);
+}
+main {
+  flex: 1;
+  padding: 2rem;
+}
+
+/* 5. Hero Section (Contact) */
+.contact-hero {
+  background: rgba(255,255,255,0.8);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.contact-hero h1 {
+  font-size: 2.5rem;
+  color: #004a99;
+  margin-bottom: 0.5rem;
+}
+.contact-hero p {
+  font-size: 1.125rem;
+  color: #555;
+}
+
+/* 6. About Section */
+.about-section {
+  max-width: 1200px;
+  margin: 2rem auto;
+  background: rgba(255,255,255,0.85);
+  padding: 2rem;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+.profile-pic img {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.profile-details {
+  flex: 1;
+}
+.profile-details h2 {
+  margin-bottom: 1rem;
+  color: #0077cc;
+}
+.profile-details ul {
+  list-style: disc inside;
+  margin: 1rem 0;
+}
+.profile-details li {
+  margin-bottom: 0.5rem;
+}
+
+/* 7. Services Section */
+.services-section {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.service-card {
+  background: rgba(255,255,255,0.9);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+}
+.service-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 180px;
+}
+.service-card h2 {
+  margin: 1rem 0 0.5rem;
+  color: #0077cc;
+}
+.service-card p {
+  margin: 0 1rem 1rem;
+  color: #555;
+}
+
+/* 8. Appointment Callout */
+.appointment-callout {
+  text-align: center;
+  margin: 3rem 0;
+}
+.btn-whatsapp,
+.btn-call {
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: opacity 0.3s;
+  margin: 0 0.5rem;
+}
+.btn-whatsapp {
+  background: #25D366;
+}
+.btn-call {
+  background: #0077cc;
+}
+.btn-whatsapp:hover,
+.btn-call:hover {
+  opacity: 0.8;
+}
+
+/* 9. Contact Main (Form & Info) */
+.contact-main {
+  padding: 2rem 1rem;
+  background: transparent;
+}
+.contact-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.card {
+  background: rgba(255,255,255,0.85);
+  padding: 2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+.card h2 {
+  color: #004a99;
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+}
+.form-card label {
+  display: block;
+  margin-bottom: 1.25rem;
+}
+.form-card span {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
+}
+.form-card input,
+.form-card textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.btn-primary {
+  background: #004a99;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.btn-primary:hover {
+  background: #003366;
+}
+.info-card p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+.info-card a {
+  color: #004a99;
+  text-decoration: none;
+  font-weight: 500;
+}
+.info-card a:hover {
+  text-decoration: underline;
+}
+
+/* 10. Map Section – responsive embed */
+.map-section {
+  background: rgba(255,255,255,0.8);
+  padding: 2rem 1rem 4rem;
+  text-align: center;
+}
+.map-heading {
+  font-size: 2rem;
+  color: #004a99;
+  margin-bottom: 1rem;
+}
+.map-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 56.25%; /* 16:9 ratio */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+/* 12. Blog Section */
+.blog-section {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.blog-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.blog-post {
+  background: rgba(255,255,255,0.9);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.blog-post:hover { transform: translateY(-5px); }
+.blog-post h2 { margin: 1rem; color: #0077cc; }
+.blog-post .date {
+  margin: 0 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+.blog-post .excerpt {
+  margin: 0 1rem 1rem;
+  color: #555;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.pagination a {
+  padding: 0.75rem 1.5rem;
+  background: #0077cc;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+.pagination a:hover { opacity: 0.8; }
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .about-section,
+  .contact-card,
+  .map-container iframe,
+  .appointment-container .buttons { width: 100%; }
+}
+/* 13. Bottom Transparent Strip */
+.bottom-strip {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 80px;                   /* adjust thickness */
+  background: rgba(255,255,255,0.8);
+  pointer-events: none;           /* lets clicks pass through */
+  z-index: 50;                    /* sit above content */
+}
+/* International Hero */
+.international-hero {
+  background: rgba(255,255,255,0.85);
+  text-align: center;
+  padding: 3rem 1rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+.international-hero h1 {
+  font-size: 2.75rem;
+  color: #004a99;
+  margin-bottom: 0.5rem;
+}
+.international-hero p {
+  font-size: 1.25rem;
+  color: #555;
+}
+
+/* Glass Card Container */
+.glass-card {
+  background: rgba(255,255,255,0.75);
+  margin: 2rem 1rem;
+  padding: 2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+/* Centered callout */
+.glass-center {
+  text-align: center;
+}
+
+/* Steps */
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 1.5rem;
+}
+.step {
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.3s, background 0.3s;
+}
+.step:hover {
+  transform: translateY(-8px);
+  background: rgba(255,255,255,0.9);
+}
+.step-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #0077cc;
+  animation: popIn 0.6s ease-out;
+}
+
+/* Plans */
+.plans-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+.plan-card {
+  flex: 1 1 250px;
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.3s, border-color 0.3s;
+  border: 2px solid transparent;
+}
+.plan-card:hover {
+  transform: scale(1.02);
+  border-color: #0077cc;
+}
+.plan-card h3 {
+  color: #004a99;
+  margin-bottom: 0.5rem;
+}
+.plan-card .price {
+  font-size: 1.5rem;
+  color: #0077cc;
+  margin-top: 1rem;
+}
+.plan-basic { border-top-color: #25D366; }
+.plan-standard { border-top-color: #0077CC; }
+.plan-premium { border-top-color: #FF9800; }
+
+/* Why Us */
+.why-list {
+  list-style: inside disc;
+  columns: 2;
+  gap: 2rem;
+}
+.why-list li {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+/* Appointment Callout */
+.appointment-callout p {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+.appointment-callout .btn-whatsapp,
+.appointment-callout .btn-call {
+  margin: 0 0.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .why-list { columns: 1; }
+  .plans-container { flex-direction: column; }
+}
+/* Expanded Services Styles */
+.services-container {
+  grid-auto-rows: auto;
+}
+.service-card {
+  min-height: 350px;
+}
+@media (max-width: 768px) {
+  .services-container {
+    grid-template-columns: 1fr;
+  }
+}
+/* Service Hero (Frosted Glass) */
+.service-hero {
+  background: rgba(255,255,255,0.85);
+  text-align: center;
+  padding: 3rem 1rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+.service-hero h1 {
+  font-size: 2.75rem;
+  color: #004a99;
+  margin-bottom: 0.5rem;
+}
+.service-hero p {
+  font-size: 1.25rem;
+  color: #555;
+}
+
+/* Expanded Services Styles */
+.services-container {
+  grid-auto-rows: auto;
+}
+.service-card {
+  min-height: 350px;
+}
+@media (max-width: 768px) {
+  .services-container {
+    grid-template-columns: 1fr;
+  }
+}
+/* Blog Hero (Frosted Glass) */
+.blog-hero {
+  background: rgba(255,255,255,0.85);
+  text-align: center;
+  padding: 3rem 1rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+.blog-hero h1 {
+  font-size: 2.75rem;
+  color: #004a99;
+  margin-bottom: 0.5rem;
+}
+.blog-hero p {
+  font-size: 1.25rem;
+  color: #555;
+}
+
+/* Blog Grid */
+.blog-section {
+  padding: 2rem 1rem;
+}
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Blog Card */
+.blog-card {
+  background: rgba(255,255,255,0.9);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+}
+.card-header {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+}
+.card-header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+.blog-card:hover .card-header img {
+  transform: scale(1.05);
+}
+.date-badge {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: #0077cc;
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+/* Card Body */
+.card-body {
+  padding: 1.5rem;
+}
+.card-body h2 {
+  font-size: 1.5rem;
+  color: #004a99;
+  margin-bottom: 0.75rem;
+}
+.card-body p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 3rem 0;
+}
+.pagination a {
+  padding: 0.75rem 1.5rem;
+  background: #0077cc;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+.pagination a:hover {
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* About Hero – frosted strip like other pages */
+.about-hero {
+  background: rgba(255,255,255,0.85);
+  text-align: center;
+  padding: 3rem 1rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+.about-hero h1 {
+  font-size: 2.75rem;
+  color: #004a99;
+  margin-bottom: 0.5rem;
+}
+.about-hero p {
+  font-size: 1.15rem;
+  color: #555;
+}
+
+/* About wrapper – the white transparent thick strip */
+.about-wrapper {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+.about-col img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 14px;
+  display: block;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+.about-title {
+  color: #004a99;
+  margin-bottom: 0.75rem;
+}
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+.badge {
+  background: rgba(0,119,204,0.08);
+  color: #004a99;
+  border: 1px solid rgba(0,119,204,0.2);
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+.about-split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+.highlight-list {
+  list-style: disc inside;
+  color: #444;
+}
+.about-cta {
+  margin-top: 1.25rem;
+}
+
+/* Why Choose Us */
+.why-us h2 {
+  text-align: center;
+  color: #004a99;
+  margin-bottom: 1rem;
+}
+.why-grid {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.75rem 1.5rem;
+}
+.why-grid li {
+  background: rgba(255,255,255,0.75);
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+}
+
+/* FAQ – pretty <details> */
+.faq-section h2 {
+  text-align: center;
+  color: #004a99;
+  margin-bottom: 1rem;
+}
+.faq {
+  background: rgba(255,255,255,0.7);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 10px;
+  margin: 0.5rem 0;
+  overflow: hidden;
+}
+.faq > summary {
+  cursor: pointer;
+  padding: 1rem 1.25rem;
+  font-weight: 600;
+  color: #333;
+  position: relative;
+  list-style: none;
+}
+.faq > summary::-webkit-details-marker { display: none; }
+.faq > summary::after {
+  content: "▾";
+  position: absolute;
+  right: 1rem;
+  transition: transform 0.2s ease;
+}
+.faq[open] > summary::after { transform: rotate(180deg); }
+.faq-body {
+  padding: 0 1.25rem 1rem 1.25rem;
+  color: #555;
+}
+
+/* Reuse global glass card look if not already defined */
+.glass-card {
+  background: rgba(255,255,255,0.82);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  padding: 2rem;
+  margin: 2rem 1rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-wrapper { grid-template-columns: 1fr; }
+  .about-col img { max-width: 520px; margin: 0 auto; }
+}
+/* ---------- FAQ + CTA Polished Styles ---------- */
+
+/* General section title */
+.section-title {
+  text-align: center;
+  color: #004a99;
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Wrapper fixes so nothing clashes with the fixed footer */
+.about-page { padding-bottom: 5.5rem; } /* room above fixed footer */
+
+/* FAQ block */
+.faq-block {
+  padding: 2rem 1.25rem;
+}
+
+.faq-list {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 12px;
+  margin: 0.6rem 0;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+}
+.faq-item[open] {
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+}
+
+.faq-item > summary {
+  cursor: pointer;
+  padding: 1.1rem 1.25rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 650;
+  color: #1f2a44;
+  position: relative;
+}
+.faq-item > summary::-webkit-details-marker { display: none; }
+
+/* Caret */
+.faq-item > summary::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #64748b;
+  border-bottom: 2px solid #64748b;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 1rem;
+  transition: transform 0.2s ease;
+}
+.faq-item[open] > summary::after {
+  transform: rotate(-135deg);
+}
+
+/* Body */
+.faq-body {
+  padding: 0 1.25rem 1.1rem 1.25rem;
+  color: #4b5563;
+  line-height: 1.7;
+}
+.faq-body a {
+  color: #0077cc;
+  text-decoration: none;
+}
+.faq-body a:hover {
+  text-decoration: underline;
+}
+
+/* CTA block */
+.glass-cta {
+  max-width: 1100px;
+  margin: 1.5rem auto 2.5rem;
+  background: rgba(255,255,255,0.87);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.1);
+  padding: 2rem 1.25rem;
+  text-align: center;
+}
+.glass-cta h2 {
+  color: #0f2c5c;
+  margin-bottom: 0.35rem;
+}
+.glass-cta p {
+  margin-bottom: 1rem;
+  color: #475569;
+}
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* Reuse your existing button styles; just ensure spacing */
+.btn-whatsapp, .btn-call { min-width: 210px; }
+
+/* Mobile spacing */
+@media (max-width: 768px) {
+  .faq-item > summary { padding-right: 2.25rem; }
+  .about-page { padding-bottom: 6.5rem; }
+}
+/* =========================
+   HOME PAGE — Aesthetic UI
+   ========================= */
+
+/* HERO */
+.home-hero {
+  position: relative;
+  padding: 5.5rem 1rem 3rem;
+  text-align: center;
+}
+.home-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.75);
+  filter: blur(0.5px);
+}
+.home-hero__inner {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 2.25rem 1.25rem;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+}
+.home-hero h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #0f2c5c;
+  margin-bottom: .5rem;
+}
+.home-hero h1 span { color: #0077cc; }
+.home-hero p {
+  color: #475569;
+  max-width: 760px;
+  margin: 0.25rem auto 1rem;
+}
+.trust-badges {
+  list-style: none;
+  display: flex; flex-wrap: wrap;
+  justify-content: center;
+  gap: .75rem 1rem;
+  margin-top: 1rem;
+  color: #334155;
+}
+
+/* SHARED */
+.section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.section-head h2 { color: #004a99; }
+.link-more {
+  color: #0077cc; text-decoration: none;
+}
+.link-more:hover { text-decoration: underline; }
+
+.home-main { padding: 2rem 1rem 6rem; } /* space for fixed footer */
+
+/* SERVICES TEASER */
+.home-services .teaser-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.25rem;
+}
+.teaser {
+  background: rgba(255,255,255,0.8);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transition: transform .25s, box-shadow .25s;
+}
+.teaser img { width: 100%; height: 150px; object-fit: cover; display:block; }
+.teaser h3 { margin: .75rem 1rem .25rem; color:#0f2c5c; }
+.teaser p  { margin: 0 1rem 1rem; color:#556; }
+.teaser:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
+
+/* ABOUT STRIP */
+.home-about {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 1.25rem;
+  align-items: center;
+}
+.home-about__text h2 { color:#004a99; margin-bottom:.5rem; }
+.home-about__text p { color:#475569; }
+.about-buttons { margin-top: 1rem; display:flex; gap:.75rem; flex-wrap:wrap; }
+.btn-ghost {
+  background: transparent; color:#004a99; border:1px solid #004a99;
+  padding: .6rem 1.2rem; border-radius: 6px; text-decoration:none; font-weight:600;
+}
+.btn-ghost:hover { background:#004a99; color:#fff; }
+.home-about__photo img {
+  width:100%; border-radius:14px; box-shadow:0 12px 32px rgba(0,0,0,.12);
+}
+
+/* TESTIMONIALS */
+.home-testimonials h2 { text-align:center; color:#004a99; margin-bottom:.5rem; }
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 1rem;
+}
+.testimonial-card {
+  background: rgba(255,255,255,0.85);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  padding: 1.25rem 1rem;
+  color: #374151;
+  line-height: 1.7;
+}
+.testimonial-card cite { display:block; margin-top:.5rem; color:#0f2c5c; font-style:normal; }
+
+/* BLOG PREVIEW */
+.home-blog .blog-preview {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 1rem;
+}
+.preview-card {
+  display:flex; gap:.75rem; align-items:center;
+  background: rgba(255,255,255,0.85);
+  border-radius: 12px; padding:.75rem;
+  text-decoration:none; color:inherit;
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  transition: transform .25s, box-shadow .25s;
+}
+.preview-card:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(0,0,0,.12); }
+.preview-card img { width:82px; height:82px; object-fit:cover; border-radius:8px; }
+.preview-card h3 { color:#0f2c5c; margin:0 0 .25rem; font-size:1.05rem; }
+.preview-card .meta { color:#64748b; font-size:.9rem; }
+
+/* CTA STRIP */
+.home-cta { text-align:center; }
+.home-cta h2 { color:#0f2c5c; margin-bottom:.25rem; }
+.home-cta p  { color:#475569; margin-bottom:.75rem; }
+
+/* Buttons (reuse existing) */
+.cta-buttons { display:flex; justify-content:center; gap:.75rem; flex-wrap:wrap; }
+.btn-whatsapp, .btn-call { min-width:210px; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .home-about { grid-template-columns: 1fr; }
+}
