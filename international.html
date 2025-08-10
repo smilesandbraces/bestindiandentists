@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>International Patients | Smiles & Braces Dental Clinic</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Smiles & Braces</a>
+      <button class="nav-toggle" aria-label="toggle menu">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="international.html" class="active">International Patients</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="page-header international-hero">
+    <h1>International Dental Tourism</h1>
+    <p>Your seamless journey to a perfect smile in Lucknow, India</p>
+  </header>
+
+  <main class="international-section">
+
+    <!-- How It Works -->
+    <section class="glass-card steps">
+      <h2>How It Works</h2>
+      <div class="steps-container">
+        <div class="step">
+          <div class="step-icon">📧</div>
+          <h3>Online Inquiry</h3>
+          <p>Send your dental history via our <a href="contact.html">contact form</a> or WhatsApp.</p>
+        </div>
+        <div class="step">
+          <div class="step-icon">🎥</div>
+          <h3>Virtual Consultation</h3>
+          <p>Live video call with Dr. Singh to tailor your plan.</p>
+        </div>
+        <div class="step">
+          <div class="step-icon">🗓️</div>
+          <h3>Schedule & Travel</h3>
+          <p>We handle flights, visa letters, and accommodation.</p>
+        </div>
+        <div class="step">
+          <div class="step-icon">🦷</div>
+          <h3>Treatment & Care</h3>
+          <p>World-class orthodontics in a state-of-the-art clinic.</p>
+        </div>
+        <div class="step">
+          <div class="step-icon">✈️</div>
+          <h3>Follow-Up</h3>
+          <p>Telehealth check-ins and custom retainers sent home.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Treatment Plans -->
+    <section class="glass-card plans">
+      <h2>Treatment Plans</h2>
+      <div class="plans-container">
+        <div class="plan-card plan-basic">
+          <h3>Basic</h3>
+          <p>Ideal for minor alignments</p>
+          <ul>
+            <li>Exam & X-ray</li>
+            <li>Basic braces or aligners</li>
+            <li>2 follow-ups</li>
+          </ul>
+          <p class="price">₹30,000 +</p>
+        </div>
+        <div class="plan-card plan-standard">
+          <h3>Standard</h3>
+          <p>Complete smile makeover</p>
+          <ul>
+            <li>Full orthodontic treatment</li>
+            <li>Digital smile preview</li>
+            <li>5 follow-ups</li>
+          </ul>
+          <p class="price">₹80,000 +</p>
+        </div>
+        <div class="plan-card plan-premium">
+          <h3>Premium</h3>
+          <p>Luxury all-inclusive</p>
+          <ul>
+            <li>VIP transfers & stay</li>
+            <li>Premium braces & retainers</li>
+            <li>Unlimited follow-ups</li>
+            <li>City tour extras</li>
+          </ul>
+          <p class="price">₹150,000 +</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="glass-card why-us">
+      <h2>Why Choose Us?</h2>
+      <ul class="why-list">
+        <li><strong>15+ years</strong> of orthodontic excellence</li>
+        <li><strong>60% cost savings</strong> vs. Western clinics</li>
+        <li><strong>End-to-end support</strong> — flights, visa, stay</li>
+        <li><strong>Cutting-edge</strong> digital scanners & 3D planning</li>
+        <li><strong>Internationally accredited</strong> clinic</li>
+      </ul>
+    </section>
+
+    <!-- Book Now -->
+    <section class="glass-card appointment-callout glass-center">
+      <p>Ready to transform your smile?</p>
+      <a href="https://wa.me/919565321625" class="btn-whatsapp">WhatsApp Us</a>
+      <a href="tel:+919565321625" class="btn-call">Call +91 9565321625</a>
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; 2025 Smiles & Braces Dental Clinic. All rights reserved.
+  </footer>
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle'),
+          navLinks  = document.querySelector('.nav-links');
+    navToggle.addEventListener('click', () => navLinks.classList.toggle('nav-open'));
+  </script>
+</body>
+</html>

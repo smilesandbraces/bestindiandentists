@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact & Appointments | Smiles & Braces</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Smiles & Braces</a>
+      <button class="nav-toggle" aria-label="toggle menu"><span class="hamburger"></span></button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="international.html">International Patients</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Heading -->
+  <header class="contact-hero">
+    <h1>Get in Touch</h1>
+    <p>Book your appointment or find us on the map below.</p>
+  </header>
+<main class="contact-section">
+  <!-- Appointment + Clinic Info -->
+  <section class="contact-main">
+    <div class="contact-card">
+      <!-- Appointment Form -->
+      <div class="card form-card">
+        <h2>Book Your Appointment</h2>
+        <form class="appointment-form">
+          <label><span>Full Name</span><input type="text" placeholder="John Doe" required></label>
+          <label><span>Email Address</span><input type="email" placeholder="you@example.com" required></label>
+          <label><span>Phone Number</span><input type="tel" placeholder="+91 9xxxxxxxxx" required></label>
+          <label><span>Preferred Date</span><input type="date"></label>
+          <label><span>Message / Concerns</span><textarea rows="4" placeholder="Your message…"></textarea></label>
+          <button type="submit" class="btn-primary">Submit</button>
+        </form>
+      </div>
+
+      <!-- Clinic Info -->
+      <div class="card info-card">
+        <h2>Clinic Information</h2>
+        <p><strong>Address:</strong><br>
+           Shop No.6, Javed Market,<br>
+           near Aurobindo Park, Munshi Pulia,<br>
+           Sector 12, Indira Nagar,<br>
+           Lucknow, Uttar Pradesh 226016
+        </p>
+        <p><strong>Phone / WhatsApp:</strong><br>
+           <a href="tel:+917570000801">+91 7570000801</a><br>
+           <a href="tel:+919565321625">+91 9565321625</a>
+        </p>
+        <p><strong>Email:</strong><br>
+           <a href="mailto:smilesandbracesmunshipuliya@gmail.com">smilesandbracesmunshipuliya@gmail.com</a>
+        </p>
+        <p><strong>Instagram:</strong><br>
+           <a href="https://instagram.com/drvikramjeetdental" target="_blank">@drvikramjeetdental</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+      <!-- Map Section -->
+  <section class="map-section">
+    <h2 class="map-heading">Find Us Here</h2>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d4363712.201622807!2d78.8705363729231!3d26.80032662276933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sdr%20vikramjeet!5e1!3m2!1sen!2sin!4v1754588487160!5m2!1sen!2sin"
+        frameborder="0"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+</main>
+  <footer>
+    <p>&copy; 2025 Smiles & Braces Dental Clinic. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Mobile menu toggle script
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks  = document.querySelector('.nav-links');
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-open');
+    });
+  </script>
+</body>
+</html>
