@@ -6,154 +6,227 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Smiles & Braces Dental Clinic | Dr. Vikram Jeet Singh (BDS, MDS) — Orthodontist in Indira Nagar, Lucknow</title>
   <meta name="description" content="Comfort-first orthodontics and comprehensive dentistry by Dr. Vikram Jeet Singh in Indira Nagar, Lucknow. Braces, aligners, implants, root canal, cosmetic dentistry & more." />
-  <meta name="keywords" content="Orthodontist Lucknow, Dentist Lucknow, Braces, Aligners, Dental Implants, Root Canal, Cosmetic Dentistry, Dr Vikram Jeet Singh, Indira Nagar" />
   <link rel="canonical" href="https://www.drvikramjeet.com/" />
 
-  <!-- ===== Open Graph / Twitter ===== -->
+  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Smiles & Braces Dental Clinic | Dr. Vikram Jeet Singh" />
   <meta property="og:description" content="Precision orthodontics & comfort-first dentistry in Indira Nagar, Lucknow." />
   <meta property="og:url" content="https://www.drvikramjeet.com/" />
   <meta property="og:image" content="https://www.drvikramjeet.com/assets/images/og-home.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Smiles & Braces Dental Clinic | Dr. Vikram Jeet Singh" />
-  <meta name="twitter:description" content="Braces, aligners, implants, RCT & cosmetic dentistry, Indira Nagar, Lucknow." />
-  <meta name="twitter:image" content="https://www.drvikramjeet.com/assets/images/og-home.jpg" />
 
-  <!-- ===== Preconnect & Fonts ===== -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Performance + Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Inter (body), Manrope (headings) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- ===== Favicon ===== -->
+  <!-- Favicon -->
   <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 
-  <!-- ===== Base Styles (no external file needed) ===== -->
+  <!-- Global stylesheet (from earlier) -->
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+  <!-- Page-specific premium styles -->
   <style>
     :root{
-      --bg:#0b1220; --panel:#0f1a38; --panel-2:#0e1630;
+      --bg:#070c1a; --panel:#0f1a38; --panel-2:#0e1630;
       --text:#eaf0ff; --muted:#a8b4c8;
       --brand:#68e5cf; --brand-2:#78a8ff; --accent:#fbbf24;
-      --border:rgba(255,255,255,.10); --radius:18px;
-      --shadow:0 14px 34px rgba(0,0,0,.28);
+      --border:rgba(255,255,255,.10); --radius:18px; --shadow:0 14px 34px rgba(0,0,0,.28);
+      --glass:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));
     }
-    *{box-sizing:border-box} html,body{height:100%}
     body{
-      margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif; color:var(--text);
       background:
         radial-gradient(1200px 700px at 10% -10%, #192b63 0%, transparent 60%),
         radial-gradient(1300px 800px at 110% 10%, #0c2440 0%, transparent 60%),
         var(--bg);
-      line-height:1.6;
-      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+      overflow-x:hidden;
     }
-    img{max-width:100%;height:auto;display:block}
-    a{color:inherit}
 
-    .container{max-width:1200px;margin:0 auto;padding:0 20px}
-    .site-header{position:sticky;top:0;z-index:50;background:rgba(15,26,56,.87);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
-    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:800;letter-spacing:.2px}
-    .brand img{width:32px;height:32px}
-    .nav{display:flex;gap:18px;align-items:center}
-    .nav a{opacity:.9;text-decoration:none}
+    /* ===== High-end Navigation */
+    .site-header{
+      position:sticky; top:0; z-index:100;
+      background:rgba(11,17,35,.55); backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--border);
+      transition: box-shadow .25s ease, background .25s ease;
+    }
+    .site-header.scrolled{ box-shadow:0 10px 30px rgba(0,0,0,.28); background:rgba(11,17,35,.75); }
+    .header-inner{ padding:14px 0; }
+    .brand{ font-family:Manrope, Inter, system-ui, sans-serif; font-weight:800; letter-spacing:.2px }
+    .nav a{
+      position:relative; padding:8px 0;
+      opacity:.92; transition:opacity .2s ease;
+    }
     .nav a:hover{opacity:1}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;border:1px solid var(--border);text-decoration:none;transition:.25s transform ease}
-    .btn:hover{transform:translateY(-1px)}
-    .btn-primary{background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#071225;border:none}
-    .btn-ghost{background:transparent}
+    .nav a::after{
+      content:""; position:absolute; left:0; bottom:-6px; height:2px; width:0%;
+      background:linear-gradient(90deg,var(--brand),var(--brand-2)); transition:width .25s ease;
+    }
+    .nav a:hover::after{ width:100% }
+    .btn-primary{ box-shadow: 0 10px 24px rgba(120,168,255,.22); }
+    .btn-primary:hover{ transform:translateY(-2px) scale(1.02) }
 
-    /* Hero */
-    .hero{padding:76px 0 36px;border-bottom:1px solid var(--border)}
-    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center}
-    .kicker{color:var(--brand);letter-spacing:.14em;font-size:12px;font-weight:800;text-transform:uppercase}
-    .hero h1{font-size:46px;line-height:1.08;margin:10px 0 10px}
-    .lead{font-size:18px;color:var(--muted)}
-    .hero-card{background:linear-gradient(180deg,rgba(120,168,255,.10),rgba(104,229,207,.10));border:1px solid var(--border);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
+    /* Off-canvas mobile menu */
+    .drawer{
+      position:fixed; inset:0 0 0 auto; width:min(88vw,360px);
+      translate:100% 0; transition:translate .3s ease; background:var(--panel);
+      border-left:1px solid var(--border); padding:18px; z-index:120;
+    }
+    .drawer.open{ translate:0 0 }
+    .drawer a{ display:block; padding:12px 4px; border-bottom:1px dashed var(--border) }
+    .scrim{ position:fixed; inset:0; background:rgba(0,0,0,.46); display:none; z-index:110 }
+    .scrim.show{ display:block }
 
-    /* Sections */
-    .section{padding:58px 0}
-    .section-title{font-size:30px;margin:0 0 18px}
-    .muted{color:var(--muted)}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-    .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--border);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
-    .card h3{margin:0 0 8px}
-    .service-card img{border-radius:14px;border:1px solid var(--border);margin-bottom:10px}
+    /* ===== Hero (with animated gradient title & blobs) */
+    .hero{
+      position:relative; padding:92px 0 48px; border-bottom:1px solid var(--border);
+      overflow:hidden;
+    }
+    .hero h1{
+      font-family:Manrope, Inter, system-ui, sans-serif;
+      font-size: clamp(36px, 6vw, 56px); line-height:1.05; margin:10px 0 12px;
+      background:linear-gradient(90deg,#fff, #bfe6ff, #c9fff1, #fff);
+      -webkit-background-clip:text; background-clip:text; color:transparent;
+      animation: shine 8s linear infinite;
+    }
+    @keyframes shine{
+      0%{ background-position:0% 50% } 100%{ background-position:200% 50% }
+    }
+    .kicker{ color:var(--brand); letter-spacing:.14em; font-size:12px; font-weight:800; text-transform:uppercase }
+    .lead{ font-size:18px; color:var(--muted) }
+    .hero-grid{ display:grid; grid-template-columns:1.15fr .85fr; gap:28px; align-items:center }
+    .hero-card{ background:var(--glass); border:1px solid var(--border); border-radius:22px; padding:16px; box-shadow:var(--shadow) }
+    .blob, .blob2{
+      position:absolute; filter: blur(50px); opacity:.45; z-index:-1; border-radius:50%;
+      animation: floaty 14s ease-in-out infinite;
+    }
+    .blob{ width:540px; height:540px; background:radial-gradient(circle at 30% 30%, #78a8ff, transparent 60%); top:-120px; left:-120px }
+    .blob2{ width:480px; height:480px; background:radial-gradient(circle at 60% 60%, #68e5cf, transparent 60%); bottom:-140px; right:-140px; animation-duration:18s }
+    @keyframes floaty{
+      0%,100%{ transform:translate(0,0) scale(1) } 50%{ transform:translate(20px,-14px) scale(1.06) }
+    }
 
-    /* Trust Strip */
-    .trust .stat{display:flex;flex-direction:column;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--border);border-radius:16px;padding:16px;text-align:center}
-    .trust .stat strong{font-size:28px}
+    /* ===== Sections & components (enhanced) */
+    .icon-bullet{display:inline-flex;align-items:center;gap:8px}
+    .icon-bullet svg{opacity:.9}
 
-    /* Testimonials */
-    .quote{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--border);border-radius:var(--radius);padding:18px}
-    .quote cite{display:block;margin-top:8px;color:var(--muted)}
+    .features{ display:grid; grid-template-columns: repeat(3,1fr); gap:20px }
+    .feature{ border-radius:18px; border:1px solid var(--border); background:var(--glass); padding:18px; box-shadow:var(--shadow) }
+    .feature h3{ margin:0 0 6px }
+    .feature .mini{ font-size:13px; color:var(--muted) }
 
-    /* CTA Banner */
-    .cta-banner{background:linear-gradient(90deg,rgba(120,168,255,.12),rgba(104,229,207,.12));border:1px solid var(--border);border-radius:var(--radius);padding:22px;text-align:center;box-shadow:var(--shadow)}
+    .service-card:hover{ transform:translateY(-4px); transition: transform .25s ease }
+    .service-card img{ aspect-ratio: 4/3; object-fit: cover }
 
-    /* Footer */
-    .site-footer{margin-top:48px;background:var(--panel-2);border-top:1px solid var(--border)}
-    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:20px;padding:26px 0}
-    .legal{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-top:1px solid var(--border)}
+    /* Stats strip */
+    .trust .stat{ transform:translateY(6px); transition:transform .25s ease }
+    .trust .stat:hover{ transform:translateY(-2px) }
+
+    /* Testimonials carousel (simple) */
+    .carousel{ position:relative; overflow:hidden }
+    .track{ display:flex; transition: transform .5s ease }
+    .slide{ min-width:100% }
+    .dots{ display:flex; gap:8px; justify-content:center; margin-top:12px }
+    .dot{ width:8px; height:8px; border-radius:50%; background:#4a5671; border:1px solid var(--border); cursor:pointer }
+    .dot.active{ background:linear-gradient(90deg,var(--brand),var(--brand-2)) }
+
+    /* CTA banner */
+    .cta-banner{ border-radius:22px }
+
+    /* Footer polish */
+    .site-footer .brand span{ font-family:Manrope, Inter, system-ui, sans-serif }
+
+    /* Reveal on scroll */
+    .reveal{ opacity:0; transform: translateY(14px); transition: all .6s cubic-bezier(.2,.65,.2,1) }
+    .reveal.show{ opacity:1; transform: translateY(0) }
 
     /* Responsive */
-    .hamburger{display:none;background:none;border:none;cursor:pointer}
-    .hamburger span{display:block;width:24px;height:2px;background:var(--text);margin:5px 0}
     @media (max-width: 980px){
-      .hero-grid{grid-template-columns:1fr}
-      .grid-3{grid-template-columns:1fr}
-      .grid-2{grid-template-columns:1fr}
-      .nav{position:fixed;inset:64px 16px auto 16px;background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:14px;display:none;flex-direction:column}
-      .nav.open{display:flex}
-      .hamburger{display:block}
+      .hero-grid{ grid-template-columns:1fr }
+      .features{ grid-template-columns:1fr }
     }
   </style>
-  <link rel="stylesheet" href="/assets/css/styles.css">
-
 </head>
 
 <body>
-  <!-- ===== Header / Navigation ===== -->
-  <header class="site-header" role="banner">
+  <!-- ===== NAVBAR ===== -->
+  <header class="site-header" role="banner" id="header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Smiles & Braces Dental Clinic">
-        <img src="/assets/images/logo.svg" alt="Clinic Logo" />
+        <img src="/assets/images/logo.svg" alt="Clinic Logo" width="32" height="32" />
         <span>Smiles & Braces</span>
       </a>
-      <nav class="nav" id="nav" role="navigation" aria-label="Main">
-        <a href="index.html">Home</a>
+
+      <nav class="nav" id="nav" aria-label="Main" style="gap:22px">
+        <a href="index.html" aria-current="page">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="testimonials.html">Testimonials</a>
         <a href="blog.html">Blog</a>
-        <a href="contact.html" class="btn btn-primary">Book Appointment</a>
+        <a class="btn btn-primary" href="contact.html">Book Appointment</a>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-controls="nav" aria-expanded="false">
+
+      <!-- Mobile toggles -->
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-controls="drawer" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
+
+    <!-- Off-canvas drawer -->
+    <div class="scrim" id="scrim"></div>
+    <aside class="drawer" id="drawer" aria-hidden="true">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+        <a class="brand" href="index.html"><img src="/assets/images/logo.svg" alt="" width="28" height="28"><span>Smiles & Braces</span></a>
+        <button class="btn" id="closeDrawer" aria-label="Close">✕</button>
+      </div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="blog.html">Blog</a>
+      <a class="btn btn-primary" href="contact.html" style="margin-top:12px">Book Appointment</a>
+    </aside>
   </header>
 
   <main id="home" role="main">
     <!-- ===== HERO ===== -->
     <section class="hero">
+      <!-- floating blobs -->
+      <div class="blob" aria-hidden="true"></div>
+      <div class="blob2" aria-hidden="true"></div>
+
       <div class="container hero-grid">
-        <div>
+        <div class="reveal">
           <div class="kicker">Orthodontics • Implants • Cosmetic</div>
           <h1>Precision Orthodontics & Comfort-First Dentistry in Lucknow</h1>
           <p class="lead">Led by Dr. Vikram Jeet Singh (BDS, MDS), we deliver braces, aligners, implants, root canal & smile design with accuracy, hygiene and care.</p>
-          <p>
+          <p style="display:flex;gap:10px;flex-wrap:wrap">
             <a class="btn btn-primary" href="contact.html">Book an Appointment</a>
             <a class="btn btn-ghost" href="services.html">Explore Services</a>
           </p>
-          <ul class="muted" style="margin:10px 0 0; padding-left:18px;">
-            <li>Digital treatment planning • Transparent pricing</li>
-            <li>International patient documentation & follow-up</li>
-            <li>Strict hygiene & long-term results</li>
+          <ul class="muted" style="margin:12px 0 0; padding-left:18px;">
+            <li class="icon-bullet">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 6L9 17l-5-5"/></svg>
+              Digital treatment planning • Transparent pricing
+            </li>
+            <li class="icon-bullet">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 6L9 17l-5-5"/></svg>
+              International patient documentation & follow-up
+            </li>
+            <li class="icon-bullet">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 6L9 17l-5-5"/></svg>
+              Strict hygiene & long-term results
+            </li>
           </ul>
         </div>
-        <div>
+
+        <div class="reveal">
           <div class="hero-card">
+            <!-- Replace with your hero image -->
             <img src="/assets/images/hero-abstract.jpg" alt="Modern dental care illustration" loading="eager" width="640" height="420" />
             <p class="muted" style="margin-top:10px;">98% patient satisfaction • Same-day consults • Comfort-first care</p>
           </div>
@@ -161,37 +234,53 @@
       </div>
     </section>
 
-    <!-- ===== KEEP YOUR EXISTING INTRO/ABOUT CONTENT ===== -->
+    <!-- ===== PREMIUM FEATURE HIGHLIGHTS ===== -->
+    <section class="section">
+      <div class="container features">
+        <article class="feature reveal">
+          <h3>Comfort-First Protocols</h3>
+          <p class="mini">Self-ligating systems, gentle forces & post-visit support for easy starts.</p>
+        </article>
+        <article class="feature reveal">
+          <h3>Digitally Planned</h3>
+          <p class="mini">Simulations & timelines upfront — fewer surprises, faster visits.</p>
+        </article>
+        <article class="feature reveal">
+          <h3>Hygiene & Safety</h3>
+          <p class="mini">ISO-style sterilization, clean rooms, documented aftercare.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== KEEP YOUR EXISTING INTRO/ABOUT CONTENT (unchanged) ===== -->
     <section class="section">
       <div class="container">
         <h2 class="section-title">About the Clinic</h2>
-        <!-- ✅ PASTE YOUR EXISTING ABOUT / INTRO CONTENT BELOW (unchanged) -->
-        <div class="card">
-          <!-- PASTE YOUR EXISTING CONTENT: Start -->
-          <p>Replace this line with your existing “About / Intro” content from your current page (as-is, unchanged).</p>
-          <!-- PASTE YOUR EXISTING CONTENT: End -->
+        <div class="card reveal">
+          <!-- ✅ Paste your existing About/Intro HTML below (unchanged) -->
+          <p>Replace this block with your existing “About / Intro” content (as-is, unchanged).</p>
         </div>
       </div>
     </section>
 
-    <!-- ===== SERVICES PREVIEW (with images) ===== -->
+    <!-- ===== SERVICES PREVIEW ===== -->
     <section class="section" id="services-preview" aria-labelledby="servicesHeading">
       <div class="container">
         <h2 id="servicesHeading" class="section-title">Featured Services</h2>
         <div class="grid-3">
-          <article class="card service-card">
+          <article class="card service-card reveal">
             <img src="/assets/images/services/braces.jpg" alt="Braces & Orthodontics" loading="lazy" decoding="async" />
             <h3>Braces & Aligners</h3>
             <p class="muted">Self-ligating braces, clear aligners; digitally planned for comfort & efficiency.</p>
             <p><a class="btn" href="services.html#braces">Learn more</a></p>
           </article>
-          <article class="card service-card">
+          <article class="card service-card reveal">
             <img src="/assets/images/services/implants.jpg" alt="Dental Implants" loading="lazy" decoding="async" />
             <h3>Dental Implants</h3>
             <p class="muted">Case-based implant systems with long-term follow-up and hygiene protocols.</p>
             <p><a class="btn" href="services.html#implants">Learn more</a></p>
           </article>
-          <article class="card service-card">
+          <article class="card service-card reveal">
             <img src="/assets/images/services/rct.jpg" alt="Root Canal Therapy" loading="lazy" decoding="async" />
             <h3>Root Canal Therapy</h3>
             <p class="muted">Comfort-first RCT with precision and postoperative guidance.</p>
@@ -201,89 +290,77 @@
       </div>
     </section>
 
-    <!-- ===== KEEP YOUR EXISTING SERVICES CONTENT ===== -->
+    <!-- ===== KEEP YOUR EXISTING SERVICES CONTENT (unchanged) ===== -->
     <section class="section">
       <div class="container">
         <h2 class="section-title">All Services</h2>
-        <!-- ✅ PASTE YOUR EXISTING SERVICES HTML BELOW (unchanged) -->
-        <div class="card">
-          <!-- PASTE YOUR EXISTING SERVICES CONTENT: Start -->
-          <p>Replace this line with your existing detailed services section from your current page (as-is, unchanged).</p>
-          <!-- PASTE YOUR EXISTING SERVICES CONTENT: End -->
+        <div class="card reveal">
+          <!-- ✅ Paste your existing detailed Services HTML below (unchanged) -->
+          <p>Replace this line with your existing detailed services section (as-is, unchanged).</p>
         </div>
       </div>
     </section>
 
-    <!-- ===== TRUST STRIP ===== -->
+    <!-- ===== TRUST / STATS ===== -->
     <section class="section trust" aria-label="Trust & Credentials">
       <div class="container grid-3">
-        <div class="stat"><strong>15+ Years</strong><span class="muted">Orthodontic Expertise</span></div>
-        <div class="stat"><strong>98%</strong><span class="muted">Patient Satisfaction</span></div>
-        <div class="stat"><strong>Clean & Safe</strong><span class="muted">Strict Hygiene Protocols</span></div>
+        <div class="stat reveal"><strong data-count="15">15+</strong><span class="muted">Years Orthodontic Expertise</span></div>
+        <div class="stat reveal"><strong data-count="98">98%</strong><span class="muted">Patient Satisfaction</span></div>
+        <div class="stat reveal"><strong>Clean & Safe</strong><span class="muted">Strict Hygiene Protocols</span></div>
       </div>
     </section>
 
-    <!-- ===== TESTIMONIALS SNIPPET ===== -->
+    <!-- ===== TESTIMONIALS (carousel) ===== -->
     <section class="section" id="testimonials" aria-labelledby="tHeading">
       <div class="container">
         <h2 id="tHeading" class="section-title">What Patients Say</h2>
-        <div class="grid-2">
-          <blockquote class="quote">“Exceptional experience! My braces journey was smooth and painless.”<cite>— Patient, Indira Nagar</cite></blockquote>
-          <blockquote class="quote">“Professional, clean, and caring. Highly recommended for aligners.”<cite>— Patient, Lucknow</cite></blockquote>
+        <div class="card carousel reveal" style="padding:0">
+          <div class="track" id="track">
+            <div class="slide"><blockquote class="quote" style="margin:0;padding:20px">“Exceptional experience! My braces journey was smooth and painless.”<cite>— Aditi, Indira Nagar</cite></blockquote></div>
+            <div class="slide"><blockquote class="quote" style="margin:0;padding:20px">“Professional, clean, and caring. Highly recommended for aligners.”<cite>— Rahul, Lucknow</cite></blockquote></div>
+            <div class="slide"><blockquote class="quote" style="margin:0;padding:20px">“Implant + crown feels like a real tooth. Excellent hygiene.”<cite>— Sana, Gomti Nagar</cite></blockquote></div>
+          </div>
         </div>
-      </div>
-    </section>
-
-    <!-- ===== KEEP YOUR EXISTING TESTIMONIALS (IF ANY) ===== -->
-    <section class="section">
-      <div class="container">
-        <!-- ✅ PASTE YOUR EXISTING TESTIMONIALS HTML BELOW (unchanged) -->
-        <div class="card">
-          <!-- PASTE YOUR EXISTING TESTIMONIALS CONTENT: Start -->
-          <p>Replace this with your original testimonials block (if present in your page).</p>
-          <!-- PASTE YOUR EXISTING TESTIMONIALS CONTENT: End -->
-        </div>
+        <div class="dots" id="dots" aria-label="Carousel pagination"></div>
       </div>
     </section>
 
     <!-- ===== CTA BANNER ===== -->
-    <section class="container cta-banner" aria-label="Book Appointment">
+    <section class="container cta-banner reveal" aria-label="Book Appointment" style="margin: 8px auto 48px;">
       <h2 style="margin:0 0 6px">Ready for your best smile?</h2>
       <p class="muted" style="margin:0 0 10px">Consult with Dr. Vikram Jeet Singh — precise, gentle, and affordable care.</p>
       <p style="margin:0"><a class="btn btn-primary" href="contact.html">Book Appointment</a></p>
     </section>
 
-    <!-- ===== KEEP YOUR EXISTING CONTACT/FOOTER CONTENT (if any on home) ===== -->
+    <!-- ===== KEEP YOUR EXISTING CONTACT/FOOTER SECTION (unchanged) ===== -->
     <section class="section">
       <div class="container">
         <h2 class="section-title">Get in Touch</h2>
-        <!-- ✅ PASTE YOUR EXISTING CONTACT FORM / INFO BELOW (unchanged) -->
-        <div class="card">
-          <!-- PASTE YOUR EXISTING CONTACT CONTENT: Start -->
+        <div class="card reveal">
+          <!-- ✅ Paste your existing contact form/info/map (unchanged) -->
           <p>Replace this with your existing contact section (address, phone, form, map).</p>
-          <!-- PASTE YOUR EXISTING CONTACT CONTENT: End -->
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ===== Footer ===== -->
+  <!-- ===== FOOTER ===== -->
   <footer class="site-footer" role="contentinfo">
     <div class="container footer-grid">
       <div>
         <a class="brand" href="index.html">
-          <img src="/assets/images/logo.svg" alt="Clinic Logo" />
+          <img src="/assets/images/logo.svg" alt="Clinic Logo" width="32" height="32" />
           <span>Smiles & Braces</span>
         </a>
         <p class="muted">Shop No. 6, Javed Market, near Aurobindo Park, Munshi Pulia, Sector 12, Indira Nagar, Lucknow, Uttar Pradesh 226016</p>
       </div>
       <div>
         <h3>Explore</h3>
-        <p><a href="about.html">About</a> · <a href="services.html">Services</a> · <a href="blog.html">Blog</a> · <a href="contact.html">Contact</a></p>
+        <p><a href="about.html">About</a> · <a href="services.html">Services</a> · <a href="gallery.html">Gallery</a> · <a href="testimonials.html">Testimonials</a> · <a href="blog.html">Blog</a> · <a href="contact.html">Contact</a></p>
       </div>
       <div>
         <h3>Contact</h3>
-        <p class="muted">Phone: +91 99350 78647<br/>Email: smilesandbraces.dental@gmail.com</p>
+        <p class="muted">Phone: <a href="tel:+919935078647" data-phone>+91 99350 78647</a><br/>Email: <a href="mailto:smilesandbraces.dental@gmail.com">smilesandbraces.dental@gmail.com</a></p>
       </div>
     </div>
     <div class="container legal">
@@ -292,20 +369,84 @@
     </div>
   </footer>
 
-  <!-- ===== Small JS (nav + year) ===== -->
+  <!-- ===== Scripts: nav, drawer, year, reveals, counters, carousel ===== -->
   <script>
-    const nav = document.getElementById('nav');
+    // Sticky header shadow
+    const header = document.getElementById('header');
+    const onScroll = ()=> header.classList.toggle('scrolled', window.scrollY > 6);
+    onScroll(); addEventListener('scroll', onScroll);
+
+    // Drawer (mobile)
     const burger = document.getElementById('hamburger');
-    if (burger && nav){
-      burger.addEventListener('click', ()=> {
-        const open = nav.classList.toggle('open');
-        burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-    }
+    const drawer = document.getElementById('drawer');
+    const scrim  = document.getElementById('scrim');
+    const closeDrawer = document.getElementById('closeDrawer');
+    const toggleDrawer = (open)=>{
+      drawer.classList.toggle('open', open);
+      scrim.classList.toggle('show', open);
+      burger.setAttribute('aria-expanded', open ? 'true':'false');
+      drawer.setAttribute('aria-hidden', open ? 'false':'true');
+      document.body.style.overflow = open ? 'hidden' : '';
+    };
+    burger?.addEventListener('click', ()=> toggleDrawer(true));
+    scrim?.addEventListener('click', ()=> toggleDrawer(false));
+    closeDrawer?.addEventListener('click', ()=> toggleDrawer(false));
+
+    // Footer year
     document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Scroll reveal
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target); }});
+    }, {threshold:.14});
+    document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
+
+    // Count-up for numbers
+    const countEls = document.querySelectorAll('[data-count]');
+    const animateCount = (el)=>{
+      const target = parseInt(el.getAttribute('data-count'),10);
+      let start = 0; const dur = 900; const t0 = performance.now();
+      const step = (t)=>{
+        const p = Math.min(1, (t - t0)/dur);
+        el.textContent = (p*target).toFixed(0) + (el.textContent.includes('%') ? '%' : (el.getAttribute('data-suffix')||'+'));
+        if(p<1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    };
+    countEls.forEach(el=>{
+      const obs = new IntersectionObserver((es)=>{
+        es.forEach(x=>{ if(x.isIntersecting){ animateCount(el); obs.disconnect(); }});
+      }, {threshold:.6});
+      obs.observe(el);
+    });
+
+    // Testimonials carousel
+    const track = document.getElementById('track');
+    const slides = track ? Array.from(track.children) : [];
+    const dotsWrap = document.getElementById('dots');
+    let idx = 0;
+    if (slides.length){
+      slides.forEach((_,i)=>{
+        const d=document.createElement('button'); d.className='dot'+(i===0?' active':''); d.setAttribute('aria-label','Go to slide '+(i+1));
+        d.addEventListener('click',()=>{ idx=i; update(); });
+        dotsWrap.appendChild(d);
+      });
+      function update(){
+        track.style.transform = `translateX(-${idx*100}%)`;
+        dotsWrap.querySelectorAll('.dot').forEach((d,i)=> d.classList.toggle('active', i===idx));
+      }
+      setInterval(()=>{ idx=(idx+1)%slides.length; update(); }, 6000);
+    }
+
+    // Site JSON hydration (phone/address), if available
+    fetch('/assets/site.json').then(r=>r.json()).then(cfg=>{
+      const s = cfg.site;
+      document.querySelectorAll('a[href^="tel:"]').forEach(a=>a.href = 'tel:' + s.contact.phone_tel);
+      document.querySelectorAll('[data-phone]').forEach(el=>el.textContent = s.contact.phone_display);
+    }).catch(()=>{});
   </script>
 
-  <!-- ===== JSON-LD Schema (LocalBusiness/Dentist + Website + Breadcrumb) ===== -->
+  <!-- ===== JSON-LD Schema ===== -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -330,9 +471,7 @@
       "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
       "opens": "10:00", "closes": "20:00"
     }],
-    "sameAs": [
-      "https://maps.google.com/?q=Smiles+%26+Braces+Dental+Clinic+Lucknow"
-    ],
+    "sameAs": ["https://maps.google.com/?q=Smiles+%26+Braces+Dental+Clinic+Lucknow"],
     "founder": { "@type": "Person", "name": "Dr. Vikram Jeet Singh" }
   }
   </script>
@@ -362,24 +501,8 @@
 
   <noscript>
     <div class="container" style="padding:10px;color:#000;background:#fff4c2">
-      JavaScript is disabled. Navigation menu and some visual effects may be limited.
+      JavaScript is disabled. Navigation and visual effects may be limited.
     </div>
   </noscript>
-  <script>
-fetch('/assets/site.json').then(r=>r.json()).then(cfg=>{
-  const s = cfg.site;
-  // Example: set current year footer
-  const y = document.getElementById('y'); if (y) y.textContent = new Date().getFullYear();
-  // Example: update phone links everywhere
-  document.querySelectorAll('a[href^="tel:"]').forEach(a=>a.href = 'tel:' + s.contact.phone_tel);
-  document.querySelectorAll('[data-phone]').forEach(el=>el.textContent = s.contact.phone_display);
-  // Example: update address
-  document.querySelectorAll('[data-address]').forEach(el=>el.textContent =
-    `${s.address.street}, ${s.address.city}, ${s.address.region} ${s.address.postal}`);
-});
-</script>
-
 </body>
 </html>
-
-
