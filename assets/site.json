@@ -1,1 +1,76 @@
+{
+  "site": {
+    "name": "Smiles & Braces Dental Clinic",
+    "domain": "www.drvikramjeet.com",
+    "logo": "/assets/images/logo.svg",
+    "theme": {
+      "colors": {
+        "bg": "#0b1220",
+        "panel": "#0f1a38",
+        "panel2": "#0e1630",
+        "text": "#eaf0ff",
+        "muted": "#a8b4c8",
+        "brand": "#68e5cf",
+        "brand2": "#78a8ff",
+        "accent": "#fbbf24",
+        "border": "rgba(255,255,255,.10)"
+      },
+      "radius": 18
+    },
+    "contact": {
+      "phone_display": "+91 99350 78647",
+      "phone_tel": "+919935078647",
+      "email": "smilesandbraces.dental@gmail.com",
+      "whatsapp": "https://wa.me/919935078647"
+    },
+    "address": {
+      "street": "Shop No. 6, Javed Market, near Aurobindo Park, Munshi Pulia, Sector 12, Indira Nagar",
+      "city": "Lucknow",
+      "region": "UP",
+      "postal": "226016",
+      "country": "IN",
+      "lat": 26.879,
+      "lng": 80.998,
+      "maps_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d..."
+    },
+    "hours": {
+      "monday_saturday": "10:00 – 20:00",
+      "sunday": "By appointment"
+    },
+    "menus": {
+      "main": [
+        {"label": "Home", "href": "/index.html"},
+        {"label": "About", "href": "/about.html"},
+        {"label": "Services", "href": "/services.html"},
+        {"label": "Gallery", "href": "/gallery.html"},
+        {"label": "Testimonials", "href": "/testimonials.html"},
+        {"label": "Blog", "href": "/blog.html"},
+        {"label": "Book Appointment", "href": "/contact.html", "button": true}
+      ],
+      "footer": [
+        {"label": "Home", "href": "/index.html"},
+        {"label": "About", "href": "/about.html"},
+        {"label": "Services", "href": "/services.html"},
+        {"label": "Gallery", "href": "/gallery.html"},
+        {"label": "Testimonials", "href": "/testimonials.html"},
+        {"label": "Blog", "href": "/blog.html"},
+        {"label": "Contact", "href": "/contact.html"}
+      ]
+    },
+    "seo": {
+      "defaultTitle": "Smiles & Braces Dental Clinic — Orthodontics & Complete Dental Care | Lucknow",
+      "defaultDescription": "Braces & aligners, implants, RCT, cosmetic dentistry, whitening and more — comfort-first care in Indira Nagar, Lucknow.",
+      "ogImage": "/assets/images/og-default.jpg",
+      "twitterCard": "summary_large_image"
+    },
+    "services": [
+      "Braces & Aligners","Dental Implants","Root Canal Therapy","Cosmetic Dentistry","Teeth Whitening",
+      "Veneers","Crowns & Bridges","Dentures","Periodontal Therapy","Scaling & Polishing",
+      "Retainers","TMJ/TMD Care","Pediatric Dentistry","Emergency Dentistry","Preventive Care","Extractions"
+    ],
+    "social": {
+      "google_reviews": "https://g.page/r/YOUR-GOOGLE-PROFILE/review"
+    }
+  }
+}
 
