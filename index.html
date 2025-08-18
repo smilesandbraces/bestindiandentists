@@ -365,6 +365,20 @@
       JavaScript is disabled. Navigation menu and some visual effects may be limited.
     </div>
   </noscript>
+  <script>
+fetch('/assets/site.json').then(r=>r.json()).then(cfg=>{
+  const s = cfg.site;
+  // Example: set current year footer
+  const y = document.getElementById('y'); if (y) y.textContent = new Date().getFullYear();
+  // Example: update phone links everywhere
+  document.querySelectorAll('a[href^="tel:"]').forEach(a=>a.href = 'tel:' + s.contact.phone_tel);
+  document.querySelectorAll('[data-phone]').forEach(el=>el.textContent = s.contact.phone_display);
+  // Example: update address
+  document.querySelectorAll('[data-address]').forEach(el=>el.textContent =
+    `${s.address.street}, ${s.address.city}, ${s.address.region} ${s.address.postal}`);
+});
+</script>
+
 </body>
 </html>
 
