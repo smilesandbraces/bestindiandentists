@@ -1,0 +1,11 @@
+# Robots.txt for www.drvikramjeet.com
+
+User-agent: *
+Allow: /
+
+# Block sensitive folders (if exist)
+Disallow: /assets/private/
+Disallow: /cgi-bin/
+
+# Sitemap reference
+Sitemap: https://www.drvikramjeet.com/sitemap.xml
