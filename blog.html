@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ===== Primary SEO ===== -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dental Blog — Braces, Aligners, Implants & Oral Care Tips | Smiles & Braces, Lucknow</title>
+  <meta name="description" content="Expert tips on braces, aligners, implants, RCT, cosmetic dentistry and oral hygiene from Smiles & Braces Dental Clinic, Indira Nagar, Lucknow." />
+  <link rel="canonical" href="https://www.drvikramjeet.com/blog.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Dental Blog — Smiles & Braces, Lucknow" />
+  <meta property="og:description" content="News and guides on orthodontics, implants, whitening, and daily oral care." />
+  <meta property="og:url" content="https://www.drvikramjeet.com/blog.html" />
+  <meta property="og:image" content="https://www.drvikramjeet.com/assets/images/og-blog.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Fonts & Favicon -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+
+  <!-- Styles (consistent premium system) -->
+  <style>
+    :root{
+      --bg:#0b1220; --panel:#0f1a38; --panel-2:#0e1630;
+      --text:#eaf0ff; --muted:#a8b4c8;
+      --brand:#68e5cf; --brand-2:#78a8ff; --accent:#fbbf24;
+      --border:rgba(255,255,255,.10); --radius:18px; --shadow:0 14px 34px rgba(0,0,0,.28)
+    }
+    *{box-sizing:border-box} html,body{height:100%}
+    body{
+      margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif; color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 10% -10%, #192b63 0%, transparent 60%),
+        radial-gradient(1300px 800px at 110% 10%, #0c2440 0%, transparent 60%),
+        var(--bg);
+      line-height:1.6; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    }
+    img{max-width:100%;height:auto;display:block}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+    /* Header */
+    .site-header{position:sticky;top:0;z-index:50;background:rgba(15,26,56,.87);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px}
+    .brand img{width:32px;height:32px}
+    .nav{display:flex;gap:18px;align-items:center}
+    .nav a{opacity:.9}
+    .nav a:hover{opacity:1}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;border:1px solid var(--border);transition:.25s transform ease}
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#071225;border:none}
+
+    .hamburger{display:none;background:none;border:none;cursor:pointer}
+    .hamburger span{display:block;width:24px;height:2px;background:var(--text);margin:5px 0}
+
+    /* Sections */
+    .section{padding:58px 0}
+    .section-title{font-size:30px;margin:0 0 18px}
+    .muted{color:var(--muted)}
+
+    /* Hero */
+    .hero{padding:76px 0 28px;border-bottom:1px solid var(--border)}
+    .hero h1{font-size:44px;line-height:1.08;margin:10px 0 8px}
+
+    /* Featured */
+    .featured{display:grid;grid-template-columns:1.2fr 1fr;gap:20px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--border);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+    .cover{border-radius:14px;border:1px solid var(--border);overflow:hidden}
+
+    /* Tools: search + chips */
+    .tools{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:12px 0 0}
+    .search{flex:1;min-width:220px;display:flex;align-items:center;gap:8px;background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:10px 12px}
+    .search input{flex:1;background:transparent;border:none;color:var(--text);outline:none}
+    .chip{padding:8px 12px;border-radius:999px;border:1px solid var(--border);cursor:pointer;user-select:none}
+    .chip.active{background:linear-gradient(90deg,rgba(120,168,255,.18),rgba(104,229,207,.18))}
+
+    /* Grid */
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .post .meta{display:flex;gap:10px;align-items:center;font-size:13px;color:var(--muted)}
+    .post .tags{display:flex;gap:8px;flex-wrap:wrap}
+    .tag{font-size:12px;border:1px solid var(--border);padding:4px 8px;border-radius:999px;color:var(--muted)}
+
+    /* Sidebar */
+    .layout{display:grid;grid-template-columns:1fr 320px;gap:20px}
+    .subscribe .field{display:flex;flex-direction:column;gap:6px}
+    .subscribe input{padding:12px;border-radius:12px;border:1px solid var(--border);background:var(--panel);color:var(--text)}
+
+    /* Pagination */
+    .pagination{display:flex;gap:8px;justify-content:center;margin-top:16px}
+    .page{padding:8px 12px;border:1px solid var(--border);border-radius:10px}
+    .page.active{background:rgba(120,168,255,.18)}
+
+    /* Footer */
+    .site-footer{margin-top:48px;background:var(--panel-2);border-top:1px solid var(--border)}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:20px;padding:26px 0}
+    .legal{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-top:1px solid var(--border)}
+
+    @media (max-width: 1100px){
+      .featured{grid-template-columns:1fr}
+      .layout{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+    }
+    @media (max-width: 980px){
+      .nav{position:fixed;inset:64px 16px auto 16px;background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:14px;display:none;flex-direction:column}
+      .nav.open{display:flex}
+      .hamburger{display:block}
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== Header ===== -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Smiles & Braces Dental Clinic">
+        <img src="/assets/images/logo.svg" alt="Clinic Logo" />
+        <span>Smiles & Braces</span>
+      </a>
+      <nav class="nav" id="nav" role="navigation" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="blog.html" aria-current="page">Blog</a>
+        <a href="contact.html" class="btn btn-primary">Book Appointment</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-controls="nav" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main role="main">
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="container">
+        <span class="chip" style="cursor:default">Updates & Guides</span>
+        <h1>Dental Blog — Expert Tips & Clinic News</h1>
+        <p class="muted">Short, practical articles to help you make confident decisions about orthodontics and oral health.</p>
+      </div>
+    </section>
+
+    <!-- ===== Featured Story ===== -->
+    <section class="section">
+      <div class="container featured">
+        <article class="card post" data-tags="braces aligners orthodontics">
+          <a class="cover" href="/blog/comfort-first-braces.html">
+            <img src="/assets/images/blog/featured-braces.jpg" alt="Comfort-first braces planning" loading="lazy" decoding="async">
+          </a>
+          <div>
+            <h2 style="margin:0 0 8px;"><a href="/blog/comfort-first-braces.html">Comfort-First Braces: Planning for Less Pain & Faster Visits</a></h2>
+            <p class="muted">How digital planning, self-ligating systems, and hygiene protocols reduce discomfort and speed up orthodontic treatment.</p>
+            <div class="meta"><span>5 min read</span> · <time datetime="2025-01-01">Jan 2025</time></div>
+            <div class="tags" style="margin-top:8px;">
+              <span class="tag">Braces</span><span class="tag">Aligners</span><span class="tag">Orthodontics</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Quick tools: search + categories -->
+        <aside class="card">
+          <h3 style="margin:0 0 10px;">Search & Filter</h3>
+          <div class="tools">
+            <div class="search" role="search">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 21l-4.2-4.2M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z" stroke="currentColor" stroke-width="1.8"/></svg>
+              <input id="search" type="search" placeholder="Search posts…">
+            </div>
+            <button class="chip active" data-filter="all">All</button>
+            <button class="chip" data-filter="braces">Braces</button>
+            <button class="chip" data-filter="aligners">Aligners</button>
+            <button class="chip" data-filter="implants">Implants</button>
+            <button class="chip" data-filter="cosmetic">Cosmetic</button>
+            <button class="chip" data-filter="hygiene">Hygiene</button>
+            <button class="chip" data-filter="rct">RCT</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===== Blog Layout (posts + sidebar) ===== -->
+    <section class="section">
+      <div class="container layout">
+        <!-- Posts Grid -->
+        <div id="posts" class="grid-3">
+          <!-- Card: Aligners -->
+          <article class="card post" data-tags="aligners braces orthodontics">
+            <a class="cover" href="/blog/clear-aligners-faq.html">
+              <img src="/assets/images/blog/aligners-faq.jpg" alt="Clear aligners FAQ" loading="lazy" decoding="async">
+            </a>
+            <h3 style="margin:10px 0 6px;"><a href="/blog/clear-aligners-faq.html">Clear Aligners FAQ: Comfort, Diet & Daily Wear</a></h3>
+            <p class="muted">Answers to the most common questions before you begin aligner therapy.</p>
+            <div class="meta"><span>4 min read</span> · <time datetime="2024-12-18">Dec 2024</time></div>
+          </article>
+
+          <!-- Card: Implants -->
+          <article class="card post" data-tags="implants surgery crowns">
+            <a class="cover" href="/blog/implant-basics.html">
+              <img src="/assets/images/blog/implants-basics.jpg" alt="Dental implant basics" loading="lazy" decoding="async">
+            </a>
+            <h3 style="margin:10px 0 6px;"><a href="/blog/implant-basics.html">Dental Implants 101: Timeline, Aftercare & Success</a></h3>
+            <p class="muted">From planning and surgery to the final crown — what to expect at each step.</p>
+            <div class="meta"><span>6 min read</span> · <time datetime="2024-11-26">Nov 2024</time></div>
+          </article>
+
+          <!-- Card: Whitening -->
+          <article class="card post" data-tags="cosmetic whitening hygiene">
+            <a class="cover" href="/blog/whitening-safety.html">
+              <img src="/assets/images/blog/whitening-safety.jpg" alt="Teeth whitening safety" loading="lazy" decoding="async">
+            </a>
+            <h3 style="margin:10px 0 6px;"><a href="/blog/whitening-safety.html">Is Teeth Whitening Safe? What Dentists Recommend</a></h3>
+            <p class="muted">Protocols that protect enamel and minimize sensitivity for brighter, even results.</p>
+            <div class="meta"><span>3 min read</span> · <time datetime="2024-10-08">Oct 2024</time></div>
+          </article>
+
+          <!-- Card: RCT -->
+          <article class="card post" data-tags="rct endodontics crowns">
+            <a class="cover" href="/blog/rct-guide.html">
+              <img src="/assets/images/blog/rct-guide.jpg" alt="Root canal therapy guide" loading="lazy" decoding="async">
+            </a>
+            <h3 style="margin:10px 0 6px;"><a href="/blog/rct-guide.html">Root Canal Therapy: Pain Control & Tooth Preservation</a></h3>
+            <p class="muted">Modern anesthesia and technique keep you comfortable during endodontic care.</p>
+            <div class="meta"><span>5 min read</span> · <time datetime="2024-09-14">Sep 2024</time></div>
+          </article>
+
+          <!-- Card: Hygiene -->
+          <article class="card post" data-tags="hygiene preventive gum">
+            <a class="cover" href="/blog/gum-health-basics.html">
+              <img src="/assets/images/blog/gum-health.jpg" alt="Gum health basics" loading="lazy" decoding="async">
+            </a>
+            <h3 style="margin:10px 0 6px;"><a href="/blog/gum-health-basics.html">Gum Health Basics: Preventing Bleeding & Sensitivity</a></h3>
+            <p class="muted">Early gum care prevents bone loss; here’s how to keep gums healthy.</p>
+            <div class="meta"><span>4 min read</span> · <time datetime="2024-08-05">Aug 2024</time></div>
+          </article>
+
+          <!-- Card: Cosmetic -->
+          <article class="card post" data-tags="cosmetic veneers bonding">
+            <a class="cover" href="/blog/veneers-vs-bonding.html">
+              <img src="/assets/images/blog/veneers-bonding.jpg" alt="Veneers vs bonding comparison" loading="lazy" decoding="async">
+            </a>
+            <h3 style="margin:10px 0 6px;"><a href="/blog/veneers-vs-bonding.html">Veneers vs Bonding: Which Is Right for Your Smile?</a></h3>
+            <p class="muted">Aesthetic options explained with pros, cons, and case selection tips.</p>
+            <div class="meta"><span>4 min read</span> · <time datetime="2024-07-01">Jul 2024</time></div>
+          </article>
+        </div>
+
+        <!-- Sidebar -->
+        <aside>
+          <div class="card">
+            <h3 style="margin:0 0 8px;">Popular Topics</h3>
+            <p class="muted" style="margin:0">Braces · Aligners · Implants · Whitening · Gum Health</p>
+          </div>
+          <div class="card" style="margin-top:14px;">
+            <h3 style="margin:0 0 8px;">Latest Posts</h3>
+            <ul class="muted" style="margin:0;padding-left:18px">
+              <li><a href="/blog/clear-aligners-faq.html">Clear Aligners FAQ</a></li>
+              <li><a href="/blog/implant-basics.html">Dental Implants 101</a></li>
+              <li><a href="/blog/rct-guide.html">Root Canal Therapy Guide</a></li>
+            </ul>
+          </div>
+          <!-- Newsletter (Netlify-ready) -->
+          <div class="card subscribe" style="margin-top:14px;">
+            <h3 style="margin:0 0 8px;">Subscribe for Tips</h3>
+            <form name="newsletter" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="newsletter" />
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required placeholder="you@example.com" />
+              </div>
+              <p style="margin:10px 0 0;"><button class="btn btn-primary" type="submit">Subscribe</button></p>
+              <p class="muted" style="margin:8px 0 0;">No spam. Unsubscribe anytime.</p>
+            </form>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Pagination (client-side demo) -->
+      <nav class="pagination" aria-label="Pagination">
+        <a class="page" href="#prev" aria-disabled="true">« Prev</a>
+        <a class="page active" href="#1">1</a>
+        <a class="page" href="#2">2</a>
+        <a class="page" href="#3">3</a>
+        <a class="page" href="#next">Next »</a>
+      </nav>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html">
+          <img src="/assets/images/logo.svg" alt="Clinic Logo" />
+          <span>Smiles & Braces</span>
+        </a>
+        <p class="muted">Shop No. 6, Javed Market, near Aurobindo Park, Munshi Pulia, Sector 12, Indira Nagar, Lucknow, Uttar Pradesh 226016</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <p><a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="services.html">Services</a> · <a href="gallery.html">Gallery</a> · <a href="testimonials.html">Testimonials</a> · <a href="contact.html">Contact</a></p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p class="muted">Phone: +91 99350 78647<br/>Email: smilesandbraces.dental@gmail.com</p>
+      </div>
+    </div>
+    <div class="container legal">
+      <p>© <span id="y"></span> Smiles & Braces Dental Clinic</p>
+      <p class="muted">Made with ❤️ by ChatGPT Plus</p>
+    </div>
+  </footer>
+
+  <!-- ===== Small JS (nav + year + search/filter) ===== -->
+  <script>
+    // Mobile nav
+    const nav = document.getElementById('nav');
+    const burger = document.getElementById('hamburger');
+    if (burger && nav){
+      burger.addEventListener('click', ()=> {
+        const open = nav.classList.toggle('open');
+        burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Search + filter logic
+    const search = document.getElementById('search');
+    const chips = document.querySelectorAll('[data-filter]');
+    const posts = [...document.querySelectorAll('#posts .post')];
+
+    let activeFilter = 'all';
+    function render(){
+      const q = (search.value || '').trim().toLowerCase();
+      posts.forEach(p=>{
+        const tags = (p.getAttribute('data-tags')||'').toLowerCase();
+        const text = p.textContent.toLowerCase();
+        const matchTag = activeFilter==='all' || tags.includes(activeFilter);
+        const matchSearch = !q || text.includes(q);
+        p.style.display = (matchTag && matchSearch) ? '' : 'none';
+      });
+    }
+    chips.forEach(c=>{
+      c.addEventListener('click', ()=>{
+        chips.forEach(x=>x.classList.remove('active'));
+        c.classList.add('active');
+        activeFilter = c.getAttribute('data-filter');
+        render();
+      });
+    });
+    search.addEventListener('input', render);
+  </script>
+
+  <!-- ===== JSON-LD: Blog + sample posts ===== -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Blog",
+    "name":"Smiles & Braces — Dental Blog",
+    "url":"https://www.drvikramjeet.com/blog.html",
+    "publisher":{
+      "@type":"Dentist",
+      "name":"Smiles & Braces Dental Clinic",
+      "telephone":"+91-9935078647",
+      "address":{
+        "@type":"PostalAddress",
+        "streetAddress":"Shop No. 6, Javed Market, near Aurobindo Park, Munshi Pulia, Sector 12, Indira Nagar",
+        "addressLocality":"Lucknow","addressRegion":"UP","postalCode":"226016","addressCountry":"IN"
+      }
+    },
+    "blogPost":[
+      {
+        "@type":"BlogPosting",
+        "headline":"Comfort-First Braces: Planning for Less Pain & Faster Visits",
+        "image":"https://www.drvikramjeet.com/assets/images/blog/featured-braces.jpg",
+        "author":{"@type":"Person","name":"Dr. Vikram Jeet Singh"},
+        "publisher":{"@type":"Organization","name":"Smiles & Braces Dental Clinic"},
+        "datePublished":"2025-01-01",
+        "mainEntityOfPage":"https://www.drvikramjeet.com/blog/comfort-first-braces.html",
+        "description":"How digital planning and self-ligating systems reduce discomfort and speed up orthodontic visits."
+      },
+      {
+        "@type":"BlogPosting",
+        "headline":"Clear Aligners FAQ: Comfort, Diet & Daily Wear",
+        "image":"https://www.drvikramjeet.com/assets/images/blog/aligners-faq.jpg",
+        "author":{"@type":"Person","name":"Dr. Vikram Jeet Singh"},
+        "datePublished":"2024-12-18",
+        "mainEntityOfPage":"https://www.drvikramjeet.com/blog/clear-aligners-faq.html",
+        "description":"Answers to common questions before aligner therapy."
+      },
+      {
+        "@type":"BlogPosting",
+        "headline":"Dental Implants 101: Timeline, Aftercare & Success",
+        "image":"https://www.drvikramjeet.com/assets/images/blog/implants-basics.jpg",
+        "author":{"@type":"Person","name":"Dr. Vikram Jeet Singh"},
+        "datePublished":"2024-11-26",
+        "mainEntityOfPage":"https://www.drvikramjeet.com/blog/implant-basics.html",
+        "description":"From planning to final crown — what to expect."
+      }
+    ]
+  }
+  </script>
+
+  <!-- Breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.drvikramjeet.com/"},
+      {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.drvikramjeet.com/blog.html"}
+    ]
+  }
+  </script>
+</body>
+</html>
