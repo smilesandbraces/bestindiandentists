@@ -1,0 +1,308 @@
+ABOUT.HTML 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ===== Primary SEO ===== -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Dr. Vikram Jeet Singh (BDS, MDS) — Smiles & Braces Dental Clinic, Indira Nagar, Lucknow</title>
+  <meta name="description" content="Know your orthodontist: Dr. Vikram Jeet Singh (BDS, MDS). Our comfort-first approach, credentials, technology, and values at Smiles & Braces Dental Clinic, Indira Nagar, Lucknow." />
+  <link rel="canonical" href="https://www.drvikramjeet.com/about.html" />
+
+  <!-- ===== Open Graph / Twitter ===== -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="About Dr. Vikram Jeet Singh — Smiles & Braces" />
+  <meta property="og:description" content="Precision orthodontics with comfort-first care in Lucknow." />
+  <meta property="og:url" content="https://www.drvikramjeet.com/about.html" />
+  <meta property="og:image" content="https://www.drvikramjeet.com/assets/images/og-about.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About Dr. Vikram Jeet Singh — Smiles & Braces" />
+  <meta name="twitter:description" content="Orthodontist, aligners, implants, cosmetic dentistry in Indira Nagar, Lucknow." />
+  <meta name="twitter:image" content="https://www.drvikramjeet.com/assets/images/og-about.jpg" />
+
+  <!-- ===== Fonts & Favicon ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+
+  <!-- ===== Styles (same system as index) ===== -->
+  <style>
+    :root{
+      --bg:#0b1220; --panel:#0f1a38; --panel-2:#0e1630;
+      --text:#eaf0ff; --muted:#a8b4c8;
+      --brand:#68e5cf; --brand-2:#78a8ff; --accent:#fbbf24;
+      --border:rgba(255,255,255,.10); --radius:18px; --shadow:0 14px 34px rgba(0,0,0,.28);
+    }
+    *{box-sizing:border-box} html,body{height:100%}
+    body{
+      margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif; color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 10% -10%, #192b63 0%, transparent 60%),
+        radial-gradient(1300px 800px at 110% 10%, #0c2440 0%, transparent 60%),
+        var(--bg);
+      line-height:1.6; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    }
+    img{max-width:100%;height:auto;display:block}
+    a{color:inherit}
+
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    .site-header{position:sticky;top:0;z-index:50;background:rgba(15,26,56,.87);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:800;letter-spacing:.2px}
+    .brand img{width:32px;height:32px}
+    .nav{display:flex;gap:18px;align-items:center}
+    .nav a{opacity:.9;text-decoration:none}
+    .nav a:hover{opacity:1}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;border:1px solid var(--border);text-decoration:none;transition:.25s transform ease}
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#071225;border:none}
+    .btn-ghost{background:transparent}
+    .hamburger{display:none;background:none;border:none;cursor:pointer}
+    .hamburger span{display:block;width:24px;height:2px;background:var(--text);margin:5px 0}
+
+    .section{padding:58px 0}
+    .section-title{font-size:30px;margin:0 0 18px}
+    .muted{color:var(--muted)}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--border);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+    .highlight{background:linear-gradient(90deg,rgba(120,168,255,.12),rgba(104,229,207,.12));border:1px solid var(--border);border-radius:var(--radius);padding:20px}
+    .list-check{list-style:none;padding:0;margin:0}
+    .list-check li{position:relative;padding-left:26px;margin:8px 0}
+    .list-check li::before{content:"✓";position:absolute;left:0;top:0.2rem;color:var(--brand);font-weight:800}
+    .profile{display:grid;grid-template-columns:1fr 1.2fr;gap:24px;align-items:center}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(104,229,207,.14);border:1px solid var(--border);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .site-footer{margin-top:48px;background:var(--panel-2);border-top:1px solid var(--border)}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:20px;padding:26px 0}
+    .legal{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-top:1px solid var(--border)}
+    @media (max-width: 980px){
+      .profile{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      .nav{position:fixed;inset:64px 16px auto 16px;background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:14px;display:none;flex-direction:column}
+      .nav.open{display:flex}
+      .hamburger{display:block}
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== Header ===== -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Smiles & Braces Dental Clinic">
+        <img src="/assets/images/logo.svg" alt="Clinic Logo" />
+        <span>Smiles & Braces</span>
+      </a>
+      <nav class="nav" id="nav" role="navigation" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="about.html" aria-current="page">About</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html" class="btn btn-primary">Book Appointment</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-controls="nav" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main role="main">
+    <!-- ===== Hero / Intro ===== -->
+    <section class="section" style="padding-top:72px;">
+      <div class="container profile">
+        <div>
+          <span class="badge">About the Orthodontist</span>
+          <h1 style="margin:10px 0 8px;">Dr. Vikram Jeet Singh (BDS, MDS)</h1>
+          <p class="muted">Orthodontist — Braces • Aligners • Implants • Cosmetic Dentistry</p>
+          <p class="highlight" style="margin-top:14px;">Comfort-first, digitally planned orthodontics and comprehensive dentistry for local and international patients in Lucknow.</p>
+          <p style="margin-top:10px;">
+            <a class="btn btn-primary" href="contact.html">Book Appointment</a>
+            <a class="btn btn-ghost" href="services.html">Explore Services</a>
+          </p>
+        </div>
+        <div>
+          <img src="/assets/images/doctor-portrait.jpg" alt="Dr. Vikram Jeet Singh, Orthodontist" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Paste Your Existing About Content (unchanged) ===== -->
+    <section class="section" aria-labelledby="aboutOriginal">
+      <div class="container">
+        <h2 id="aboutOriginal" class="section-title">About the Clinic</h2>
+        <div class="card">
+          <!-- ✅ PASTE YOUR EXISTING ABOUT CONTENT FROM THE OLD PAGE HERE (UNCHANGED) -->
+          <p>Replace this paragraph with your original “About / clinic intro” content as-is.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Credentials / Highlights ===== -->
+    <section class="section" aria-labelledby="credHeading">
+      <div class="container">
+        <h2 id="credHeading" class="section-title">Credentials & Highlights</h2>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Education</h3>
+            <ul class="list-check">
+              <li>BDS — (University / Year)</li>
+              <li>MDS — Orthodontics (University / Year)</li>
+              <li>Advanced Certifications — Aligners / Implants</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Expertise</h3>
+            <ul class="list-check">
+              <li>Self-ligating braces & clear aligners</li>
+              <li>Case-based implants & full mouth rehab</li>
+              <li>Digital planning & long-term follow-up</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Care & Hygiene</h3>
+            <ul class="list-check">
+              <li>ISO-style protocols; sterilization rigor</li>
+              <li>Comfort-first anesthesia & guidance</li>
+              <li>Transparent pricing & documentation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Clinic Story / Values ===== -->
+    <section class="section" aria-labelledby="storyHeading">
+      <div class="container grid-2">
+        <div>
+          <h2 id="storyHeading" class="section-title">Our Story</h2>
+          <p>Smiles & Braces was founded on a simple promise — precise orthodontics delivered with empathy and transparency. Every treatment is digitally planned and documented, so patients understand the process and the outcome.</p>
+          <p class="muted">International patients are supported with reports, timelines, and follow-ups. We keep treatment honest, hygienic, and comfortable.</p>
+        </div>
+        <div class="card">
+          <img src="/assets/images/clinic-interior.jpg" alt="Clinic interior and hygiene protocols" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Awards / Memberships (optional) ===== -->
+    <section class="section" aria-labelledby="awardsHeading">
+      <div class="container">
+        <h2 id="awardsHeading" class="section-title">Memberships & Certifications</h2>
+        <div class="grid-3">
+          <div class="card"><h3>Professional Bodies</h3><p class="muted">IDA / IOS / (Your memberships)</p></div>
+          <div class="card"><h3>Certifications</h3><p class="muted">Aligners / Implantology / Digital Dentistry</p></div>
+          <div class="card"><h3>Awards</h3><p class="muted">Any recognitions, conference talks, or publications</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Team (optional) ===== -->
+    <section class="section" aria-labelledby="teamHeading">
+      <div class="container">
+        <h2 id="teamHeading" class="section-title">Team & Support</h2>
+        <div class="grid-3">
+          <div class="card">
+            <img src="/assets/images/team-1.jpg" alt="Team member" />
+            <h3>Senior Assistant</h3>
+            <p class="muted">Chairside assistance • Sterilization</p>
+          </div>
+          <div class="card">
+            <img src="/assets/images/team-2.jpg" alt="Team member" />
+            <h3>Lab / Technician</h3>
+            <p class="muted">Models • Aligners coordination</p>
+          </div>
+          <div class="card">
+            <img src="/assets/images/team-3.jpg" alt="Team member" />
+            <h3>Reception</h3>
+            <p class="muted">Scheduling • International patients</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="container" style="margin: 18px auto 48px;">
+      <div class="highlight" style="text-align:center;">
+        <h2 style="margin:0 0 8px;">Have questions about braces or aligners?</h2>
+        <p class="muted" style="margin:0 0 12px;">Get a comfort-first consultation with clear timelines and costs.</p>
+        <p style="margin:0;"><a class="btn btn-primary" href="contact.html">Book Appointment</a></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html">
+          <img src="/assets/images/logo.svg" alt="Clinic Logo" />
+          <span>Smiles & Braces</span>
+        </a>
+        <p class="muted">Shop No. 6, Javed Market, near Aurobindo Park, Munshi Pulia, Sector 12, Indira Nagar, Lucknow, Uttar Pradesh 226016</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <p><a href="index.html">Home</a> · <a href="services.html">Services</a> · <a href="blog.html">Blog</a> · <a href="contact.html">Contact</a></p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p class="muted">Phone: +91 99350 78647<br/>Email: smilesandbraces.dental@gmail.com</p>
+      </div>
+    </div>
+    <div class="container legal">
+      <p>© <span id="y"></span> Smiles & Braces Dental Clinic</p>
+      <p class="muted">Made with ❤️ by ChatGPT Plus</p>
+    </div>
+  </footer>
+
+  <!-- ===== Small JS (nav + year) ===== -->
+  <script>
+    const nav = document.getElementById('nav');
+    const burger = document.getElementById('hamburger');
+    if (burger && nav){
+      burger.addEventListener('click', ()=> {
+        const open = nav.classList.toggle('open');
+        burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- ===== JSON-LD Schema ===== -->
+  <!-- Dentist / LocalBusiness with Person -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Dentist",
+    "name":"Smiles & Braces Dental Clinic",
+    "url":"https://www.drvikramjeet.com/about.html",
+    "image":"https://www.drvikramjeet.com/assets/images/og-about.jpg",
+    "telephone":"+91-9935078647",
+    "address":{"@type":"PostalAddress","streetAddress":"Shop No. 6, Javed Market, near Aurobindo Park, Munshi Pulia, Sector 12, Indira Nagar","addressLocality":"Lucknow","addressRegion":"UP","postalCode":"226016","addressCountry":"IN"},
+    "founder":{"@type":"Person","name":"Dr. Vikram Jeet Singh","jobTitle":"Orthodontist","alumniOf":"(Your University)","sameAs":[]}
+  }
+  </script>
+
+  <!-- Breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.drvikramjeet.com/"},
+      {"@type":"ListItem","position":2,"name":"About","item":"https://www.drvikramjeet.com/about.html"}
+    ]
+  }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
